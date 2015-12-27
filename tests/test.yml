@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: travis
   roles:
-    - ilyes512.base
+    - ansible-role-base
