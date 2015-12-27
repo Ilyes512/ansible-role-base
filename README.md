@@ -1,5 +1,6 @@
 Base (Ansidev)
 =========
+[![Build Status](https://travis-ci.org/Ilyes512/ansible-role-base.svg)](https://travis-ci.org/Ilyes512/ansible-role-base)
 
 This role installs (base) apt packages for Ubuntu Trusty (14.04).
 
