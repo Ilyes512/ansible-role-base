@@ -4,6 +4,7 @@ galaxy_info:
   description: This role installs (base) apt packages for Ubuntu Trusty (14.04).
   license: MIT
   min_ansible_version: 1.8
+  platforms:
   - name: Ubuntu
     versions:
     - trusty
