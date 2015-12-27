@@ -1,0 +1,18 @@
+---
+ansidev_production: false
+base_upgrade_packages: safe # Options: no|yes|safe|full|dist
+base_sys_packages:
+  - curl
+  - wget
+  - software-properties-common
+  - python-software-properties
+  - git
+  - vim
+base_local_sys_packages: []
+base_production_sys_packages:
+  - tmux
+  - unzip
+  - nano
+  - fail2ban
+  - logrotate
+  - acl

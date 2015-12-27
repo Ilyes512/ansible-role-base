@@ -1,0 +1,28 @@
+---
+- name: Base | Upgrade apt-packages
+  sudo: yes
+  apt:
+    upgrade: {{ base_upgrade_packages }}
+    force: {{ base_upgrade_packages }}
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Base | Install System Packages
+  apt:
+    pkg: "{{ item }}"
+    state: latest
+  with_items: base_sys_packages
+
+- name: Base | Install local System Packages
+  apt:
+    pkg: "{{ item }}"
+    state: latest
+  with_items: base_local_sys_packages
+  when: not ansidev_production
+
+- name: Base | Install production System Packages
+  apt:
+    pkg: "{{ item }}"
+    state: latest
+  with_items: base_production_sys_packages
+  when: ansidev_production
