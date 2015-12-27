@@ -2,8 +2,8 @@
 - name: Base | Upgrade apt-packages
   sudo: yes
   apt:
-    upgrade: {{ base_upgrade_packages }}
-    force: {{ base_upgrade_packages }}
+    upgrade: "{{ base_upgrade_packages }}"
+    force: "{{ base_upgrade_packages }}"
     update_cache: yes
     cache_valid_time: 3600
 
