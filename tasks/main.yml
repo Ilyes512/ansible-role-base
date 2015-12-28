@@ -8,12 +8,14 @@
     cache_valid_time: 3600
 
 - name: Base | Install System Packages
+  sudo: yes
   apt:
     pkg: "{{ item }}"
     state: latest
   with_items: base_sys_packages
 
 - name: Base | Install local System Packages
+  sudo: yes
   apt:
     pkg: "{{ item }}"
     state: latest
@@ -21,6 +23,7 @@
   when: not ansidev_production
 
 - name: Base | Install production System Packages
+  sudo: yes
   apt:
     pkg: "{{ item }}"
     state: latest
