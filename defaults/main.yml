@@ -1,6 +1,7 @@
 ---
 ansidev_production: false
 base_upgrade_packages: safe # Options: no|yes|safe|full|dist
+base_force_upgrade_packages: true
 base_sys_packages:
   - curl
   - wget
