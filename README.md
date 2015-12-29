@@ -17,14 +17,14 @@ Role Variables
 Dependencies
 ------------
 
-No dependencies
+No dependencies.
 
 Example Playbook
 ----------------
 ```
 - hosts: servers
   roles:
-    - { role: ilyes512.base, tag: base }
+    - { role: ilyes512.base, tag: ansidev.base }
 ```
 
 License
