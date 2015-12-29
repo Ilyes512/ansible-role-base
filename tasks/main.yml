@@ -6,19 +6,22 @@
     force: "{{ base_force_upgrade_packages }}"
     update_cache: yes
     cache_valid_time: 3600
-
 - name: Base | Install System Packages
   sudo: yes
   apt:
     pkg: "{{ item }}"
-    state: latest
+    state: "{{ base_packages_state }}"
+    update_cache: yes
+    cache_valid_time: 3600
   with_items: base_sys_packages
 
 - name: Base | Install local System Packages
   sudo: yes
   apt:
     pkg: "{{ item }}"
-    state: latest
+    state: "{{ base_packages_state }}"
+    update_cache: yes
+    cache_valid_time: 3600
   with_items: base_local_sys_packages
   when: not ansidev_production
 
@@ -26,6 +29,8 @@
   sudo: yes
   apt:
     pkg: "{{ item }}"
-    state: latest
+    state: "{{ base_packages_state }}"
+    update_cache: yes
+    cache_valid_time: 3600
   with_items: base_production_sys_packages
   when: ansidev_production
