@@ -12,11 +12,12 @@ base_sys_packages:
   - python-software-properties
   - git
   - vim
+  - unzip
 base_local_sys_packages: []
 base_production_sys_packages:
   - tmux
-  - unzip
   - nano
   - fail2ban
   - logrotate
   - acl
+  - htop
