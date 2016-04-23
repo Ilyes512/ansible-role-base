@@ -14,7 +14,7 @@
     state: "{{ base_package_state }}"
     update_cache: yes
     cache_valid_time: 3600
-  with_items: base_sys_packages
+  with_items: "{{ base_sys_packages }}"
 
 - name: Base | Install local System Packages
   sudo: yes
@@ -23,7 +23,7 @@
     state: "{{ base_package_state }}"
     update_cache: yes
     cache_valid_time: 3600
-  with_items: base_local_sys_packages
+  with_items: " {{ base_local_sys_packages }}"
   when: not ansidev_production
 
 - name: Base | Install production System Packages
@@ -33,5 +33,5 @@
     state: "{{ base_package_state }}"
     update_cache: yes
     cache_valid_time: 3600
-  with_items: base_production_sys_packages
+  with_items: "{{ base_production_sys_packages }}"
   when: ansidev_production
