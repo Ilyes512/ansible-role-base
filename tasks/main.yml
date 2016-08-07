@@ -1,14 +1,22 @@
 ---
-- name: Base | Upgrade apt-packages
-  sudo: yes
+- name: Install Aptitude
+  become: yes
+  apt:
+    pkg: aptitude
+    state: "{{ base_package_state }}"
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Upgrade apt-packages
+  become: yes
   apt:
     upgrade: "{{ base_upgrade_packages }}"
     force: "{{ base_force_upgrade_packages }}"
     update_cache: yes
     cache_valid_time: 3600
 
-- name: Base | Install System Packages
-  sudo: yes
+- name: Install System Packages
+  become: yes
   apt:
     pkg: "{{ item }}"
     state: "{{ base_package_state }}"
@@ -16,8 +24,8 @@
     cache_valid_time: 3600
   with_items: "{{ base_sys_packages }}"
 
-- name: Base | Install local System Packages
-  sudo: yes
+- name: Install local System Packages
+  become: yes
   apt:
     pkg: "{{ item }}"
     state: "{{ base_package_state }}"
@@ -26,8 +34,8 @@
   with_items: " {{ base_local_sys_packages }}"
   when: not ansidev_production
 
-- name: Base | Install production System Packages
-  sudo: yes
+- name: Install production System Packages
+  become: yes
   apt:
     pkg: "{{ item }}"
     state: "{{ base_package_state }}"
