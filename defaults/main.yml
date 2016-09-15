@@ -4,7 +4,7 @@ ansidev_production: false
 
 base_package_state: "{{ ansidev_package_state }}"
 base_upgrade_packages: "no" # Options: "no"|"yes"|safe|full|dist
-base_force_upgrade_packages: true
+base_force_upgrade_packages: false
 base_sys_packages:
   - curl
   - wget
