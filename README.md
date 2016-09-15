@@ -12,8 +12,6 @@ No requirements.
 Role Variables
 --------------
 
-[TODO]
-
 ```
 ansidev_package_state: present
 ansidev_production: false
