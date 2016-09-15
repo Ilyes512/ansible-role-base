@@ -3,7 +3,7 @@ ansidev_package_state: present
 ansidev_production: false
 
 base_package_state: "{{ ansidev_package_state }}"
-base_upgrade_packages: safe # Options: no|yes|safe|full|dist
+base_upgrade_packages: "no" # Options: "no"|"yes"|safe|full|dist
 base_force_upgrade_packages: true
 base_sys_packages:
   - curl
