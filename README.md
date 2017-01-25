@@ -2,7 +2,7 @@ Base (Ansidev)
 =========
 [![Build Status](https://travis-ci.org/Ilyes512/ansible-role-base.svg)](https://travis-ci.org/Ilyes512/ansible-role-base)
 
-This role installs (base) apt packages for Ubuntu Trusty (14.04).
+This role installs (base) apt packages for Ubuntu Trusty (14.04) and Xenial (16.04).
 
 Requirements
 ------------
@@ -27,6 +27,7 @@ base_sys_packages:
   - git
   - vim
   - unzip
+  - htop
 base_local_sys_packages: []
 base_production_sys_packages:
   - tmux
@@ -34,7 +35,6 @@ base_production_sys_packages:
   - fail2ban
   - logrotate
   - acl
-  - htop
 ```
 
 Dependencies

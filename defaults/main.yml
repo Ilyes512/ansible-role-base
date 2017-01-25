@@ -13,6 +13,7 @@ base_sys_packages:
   - git
   - vim
   - unzip
+  - htop
 base_local_sys_packages: []
 base_production_sys_packages:
   - tmux
@@ -20,4 +21,3 @@ base_production_sys_packages:
   - fail2ban
   - logrotate
   - acl
-  - htop
